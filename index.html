@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pexels Photo Gallery</title>
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+        
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <header class="header">
+        <div class="logo">
+            <h1><i class="fa-solid fa-camera"></i> Pexels Gallery</h1>
+        </div>
+
+        <div class="search-box">
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search beautiful photos..."
+            >
+            <button id="searchBtn">
+                <i class="fa-solid fa-magnifying-glass"></i> Search
+            </button>
+        </div>
+    </header>
+
+    <!-- ================= LOADER ================= -->
+    <div id="loader" class="loader hidden">
+        <div class="spinner"></div>
+        <p>Loading Photos...</p>
+    </div>
+
+    <!-- ================= ERROR ================= -->
+    <div id="error" class="error hidden"></div>
+
+    <!-- ================= GALLERY ================= -->
+    <main id="gallery" class="gallery">
+        <!-- Cards will be added dynamically -->
+    </main>
+
+    <!-- ================= PAGINATION ================= -->
+    <section class="pagination">
+
+        <button id="prevBtn" class="page-btn">
+            <i class="fa-solid fa-angle-left"></i>
+            Previous
+        </button>
+
+        <span id="pageNumber">Page 1</span>
+
+        <button id="nextBtn" class="page-btn">
+            Next
+            <i class="fa-solid fa-angle-right"></i>
+        </button>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>
+            Built using the
+            <strong>Pexels API</strong>
+        </p>
+    </footer>
+
+    <!-- Load API Key First -->
+    <script src="config.js"></script>
+
+    <!-- Main JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
